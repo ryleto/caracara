@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Caracara
 
 To start your Phoenix app:
@@ -17,3 +18,6 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+=======
+# caracara
+>>>>>>> 04c6f864f005a264f20485c7e266a5b867bfda97
