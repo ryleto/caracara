@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :caracara, Caracara.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "caracara_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
