@@ -15,11 +15,9 @@ defmodule Caracara.Router do
 
   scope "/", Caracara do
     pipe_through :browser # Use the default browser stack
-
     get "/", PageController, :index
+    resources "/posts", PostController
   end
-
-  resources "/posts", PostController
 
   # Other scopes may use custom stacks.
   # scope "/api", Caracara do
