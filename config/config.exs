@@ -35,4 +35,4 @@ config :guardian, Guardian,
   ttl: { 30, :days },
   verify_issuer: true, # optional
   secret_key: <guardian secret key>,
-  serializer: MyApp.GuardianSerializer
+  serializer: Caracara.GuardianSerializer
