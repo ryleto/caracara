@@ -33,7 +33,7 @@ defmodule Caracara.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_caracara_key",
-    signing_salt: "PRkXieNp"
+    signing_salt: "2/GhsMu5"
 
   plug Caracara.Router
 end

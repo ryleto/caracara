@@ -9,7 +9,7 @@ use Mix.Config
 config :caracara, Caracara.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "uRDWVVrZ/u9sxW1NZP/+lHSC1xxT21Es6MJyisNo9IpqOVP6vGVXI/4VvJtbaZEJ",
+  secret_key_base: "uFNAUmFVltl4ySAkCzSXCGeDmu47Ji/COHzyBfi48lU7wyZNdeTHen1/PUnV5FuO",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Caracara.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -27,3 +27,12 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :guardian, Guardian,
+  allowed_algos: ["HS512"], # optional
+  verify_module: Guardian.JWT,  # optional
+  issuer: "Caracara",
+  ttl: { 30, :days },
+  verify_issuer: true, # optional
+  #secret_key: <guardian secret key>,
+  serializer: Caracara.GuardianSerializer
